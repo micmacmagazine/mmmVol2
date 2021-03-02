@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	<link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff')" rel="stylesheet">
+
+	 <link rel='stylesheet' href='css/menuicon.css'>
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px; 
+			margin:0;
+			background-color:#00ffad; 
+			line-height:1.8; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 10px;
+		}
+		
+
+
+		.top{
+			position: fixed; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.bottom{
+		    z-index: 999;
+		    padding-top:7%;
+		    font-size:13px;
+		    font-family: 'GmarketSansMedium';
+		    color:#00ffad;
+		    width:100%;
+		    text-align: center;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+		}
+
+		.box_1{	
+			position:relative; 
+			z-index: 1;
+			top:10px; 
+			left: 70px; 
+			float: left; 
+			background-color: pin;
+		}
+
+		
+
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img2 {
+		  width: 90%;
+		  height: auto;
+		}
+
+		.img3{
+			width:80vw;
+			height: 80vh;
+		 	position: relative;
+		  	text-align: center;
+		  	}
+
+		.nemo{
+			position:relative;
+			margin-left: auto;
+			margin-right: auto;
+			top:110px;
+			text-align: center;
+			z-index: -999;
+		}
+
+		.text{
+			position: relative;
+			color:#00d097;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: left;
+			background-color: pik;
+			z-index: 999;
+			width:90%;
+			top:-70px;
+			left: 5%;
+		}
+
+		.bigbox{
+			position: relative;
+			width:60%;
+			height:600px;
+			margin-top:-560px;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: scroll;
+		}
+
+		
+
+		.bigbox {
+		    -ms-overflow-style: none; /* IE and Edge */
+		    scrollbar-width: none; /* Firefox */
+		}
+		.bigbox::-webkit-scrollbar {
+		    display: none; /* Chrome, Safari, Opera*/
+		}
+
+
+
+		/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.big{font-size:23px;}
+		.small{font-size}
+
+		.overlay {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 999;
+			  top: 0;
+			  right: 0;
+			  background-color: white;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			}
+
+		.overlay-content {
+			  position: relative;
+			  top: 25%;
+			  width: 100%;
+			  text-align: center;
+			  margin-top: 30px;
+			}
+
+		.overlay a {
+			  padding: 8px;
+			  text-decoration: none;
+			  font-size: 30px;
+			  font-family: 'GmarketSansBold';
+			 line-height:70px;
+			  color: #00ffad;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+		.overlay a:hover, .overlay a:focus {
+			  color: #00d097;
+			}
+
+		.overlay .closebtn {
+			  position: absolute;
+			  top: 20px;
+			  right: 45px;
+			  font-size: 60px;
+			}
+
+		.menuicon{margin-top:20px; margin-left:80vw;}
+
+		.back_button{
+			position:fixed;
+			top:170px;
+			left:5vw;
+		}
+
+		.back_button_img{
+			width:40px;
+		}
+
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+
+
+		.stella{position:relative; top:100px; margin-left: auto; margin-right:auto; text-align: left; color: black;  width:70%; background-color:}
+
+		.box_2{position:relative; color: black; top:-160px; font-size: 15px; height: 45px;margin: 2% 2.5% 2% 2.5%; overflow: scroll; width: 100%; height:500px;}
+
+
+		@media screen and (max-height: 450px) {
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn {
+		  font-size: 40px;
+		  top: 15px;
+		  right: 35px;
+		  }
+		}
+
+		@media screen and (max-width:800px){
+			.box_1{float:left; left:10px; text-align: center;}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.dropdown-content{float: left; display: inline; }
+			.bottom{padding-top:10%;}
+			.nemo{top:-30px; height:; }
+			.img3{height: 90vh;}
+			.bigbox{margin-top:-800px; height:690px;}
+			.text{top:-30px; height:690px; font-size: 15px; line-height: 30px; z-index: 55;}
+            .textbig{font-size: 20px;}
+
+			.back_button{position:fixed; top:40px; left:8vw;}
+			.back_button_img{width:40px;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+
+		}
+		
+		@media screen and (min-width:800px){
+			{display: none;}
+
+	</style>
+</head>
+
+<body>
+
+<!-- 네비게이션 메뉴 바 -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <div class="overlay-content">
+    <a href="index.html">MICMAC</a>
+    <a href="magazine.html">MAGAZINE</a>
+    <a href="introduction.html">INTRODUCTION</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</div>
+
+  <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+    <img src="pic/menu_icon2.png" width="80px">
+  </span>
+
+
+<!-- 상단메뉴  -->
+	<div class="top">
+		
+		<div class="menu">
+			<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+		</div>
+
+
+		<div class="menu">
+			<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+		</div>
+
+	</div>
+
+<!-- 뒤로가기 버튼  -->
+	<div class="back_button">
+		<a href="magazine-personal.html"><img class="back_button_img"src="pic/back.png" ></a>
+	</div>
+
+	<div class="nemo">
+		<img class="img3" src="pic/nemo.png">
+	</div> 
+
+
+	<!--
+	<div class="mmm2">
+		<img src="pic/nemo.png">
+	</div> 
+	!-->
+	<div class="bigbox">
+		
+		<div class="">
+			<img src="pic/stella.png" width="100%"> 
+		</div>
+
+		<div class="text textmedium">
+			최근 OTT시장 내 다양성을 소재로 한 콘텐츠들이 눈에 자주 띈다. 주제, 인종, 언어, 젠더, 성적 지향에 대한 차별이 줄어들고, 다양성을 존중하며 응원하는 등의 사회 트렌드가 콘텐츠 미디어에도 영향을 끼친 것이다. 다양성에 대한 플랫폼 구독자의 니즈는 플랫폼이 시청 알고리즘을 통해 파악 가능하며, 그 결과를 토대로 콘텐츠 제작 시에 반영한다. 각 플랫폼은 이처럼 주요 소비층인 2030의 입맛을 맞추기 위해 구독자 알고리즘을 바탕으로 새로운 오리지널 콘텐츠를 제작하거나 현대의 사회 트렌드가 반영된 콘텐츠를 대거 수입하기 시작했다. 이는 현대 사회 속 민감한 주제를 쉽게 이야기 나눠보고, 존중에 대한 배움을 줄 수 있는 사회로의 발전을 야기했다.<br><br>하지만 주 소비층의 입맛을 맞추기 위해 사용되었던 다양성은 ‘수단’으로써만 작용하는 문제점이 있다. 넷플릭스의 대표 오리지널 콘텐츠 성공작 중 <오렌지 이즈 더 뉴 블랙>, <기묘한 이야기>를 예시로 들 수 있다. 여성 주연 영화, 퀴어, 교도소, 성전복을 다루고 있으면서 흥행을 이뤘다.  이들의 성공 이후로 구독자 알고리즘 분석을 통해 비슷한 캐릭터를 가진 영화, 드라마를 만들어내기 시작했고 당연히 연달아 인기를 끄는 데 성공했다. 하지만 이는 단순히 알고리즘에 의한 고객 맞춤 생산으로 신규 가입자 및 구독자 유지를 위한 수단이다. 다양성에 대한 소스가 있긴 하지만 그것을 어떻게 다루느냐가 중요한데 그냥 작품 안에 다양성 소스를 넣었다 정도의 해결력을 갖고 있다. 또한 그 안에서 나름의 반복되는 클리셰까지 등장한다. 다양성 콘텐츠가 대중성을 얻는 것은 개방적이고 관용적 사회 분위기를 만들기도 하지만 다양성이라는 소재, 장르를 편집된 이미지로써 굳어버릴 수 있음을 무시해선 안된다.<br><br> 현재 넷플릭스의 콘텐츠만 둘러봐도 묘하게 비슷한 작품만 계속 나오는 느낌이 든다. ‘넷플릭스스러운’ 장면들이랄까. 봤던 거 또 보는 기분이 들 때가 있다. 오리지널 콘텐츠 성공작을 필두로 비슷한 작품들이 연달아 제작되고 있기 때문이다. 특정 플랫폼 내 알고리즘을 기반으로 만들어진 작품들은 서로 유사성을 띤다. 해당 콘셉트와 주제를 좋아하는 이들에게 만족을 얻어낼 순 있지만, 매번 반복되는 레퍼토리로 구독자들에게 피로감을 안겨주기도 한다. 예를 들어, <기묘한 이야기>를 보고 <빌어먹을 세상 따위>를 본다면 넷플릭스가 내 취향을 정확히 파악하고 있다는 건 알겠다. 하지만 <아이 엠 낫 오케이>까지 본다면 취향이고 뭐고 어디서 봤던 거 또 보는 듯하다. 물론 내가 좋아할 포인트들을 모두 넣어 놓았기 때문에 시청할 당시엔 재밌다. 작품을 다 보고 나서 찾아보니 동일한 제작진의 ‘자가복제작’임을 알게 돼 찝찝할 뿐. 어플 왓챠피디아에선 “기묘한 빌어먹을 세상 따위”라며 작품 간 유사성을 꼬집은 코멘트도 있었다.<br><br> OTT 시장 경쟁이 활발한 지금이야 다양성 소재, 장르가 연달아 제작된다 한들, 안정화가 찾아온 뒤엔 어떻게 될지 모르는 일이다. 플랫폼이 선택한 세계만을 보게 되고, 구독자들은 문화 취향이 한정될 수도 있다. 플랫폼이 OTT 시장에서 소재, 주제로 경쟁하는 것은 뉴미디어 대중성 확보에 큰 도움이 되지만, 판이 커지는 상황에서 무분별한 유사작 제작은 문화 다양성을 해치는 일이 된다. 알고리즘을 기반으로 하지 않은 영화나 독립영화, 마이너 제작사의 콘텐츠도 플랫폼 내 활발히 들어와야 한다. 이제 OTT는 TV보다 수요가 많은 플랫폼이다. 시장 내 메이저와 마이너가 시장에서 적절한 비율로 존재해야 하며, 단독 플랫폼 내 비율도 그에 따라야 한다. 그래야 구독자에게 다양한 콘텐츠를 제공하게 되고 구독자가 본인 의지대로 선택할 수 있다. 또한 아무리 알고리즘 기반, 빅데이터 기반의 소비자 수요가 높은 작품을 제작할 시에도 작품의 이슈와 소재를 어떻게 다루느냐는 제작자의 몫이다. 그저 첨가에 의의를 두지 말고 문제에 대한 깊은 고민이 담겼으면 하는 바람이다. <br><br>
+
+		</div>
+	</div>
+
+    <div class="bottom">
+    	Copyright(c)2021 MICMAC All rights reserved.
+    </div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+
+
+</html>
+

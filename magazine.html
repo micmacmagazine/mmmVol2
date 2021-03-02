@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	 <link rel='stylesheet' href='css/menuicon.css'>
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px 0px; 
+			background-color:; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 18px;
+		}
+
+
+
+		.top{
+			position: absolute; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.mid{
+			position: relative;
+			text-align: center; 
+			margin-top:60px;
+		}
+
+		.bottom{
+			z-index: 999;
+			font-size:13px;
+			font-family: 'GmarketSansMedium';
+			color:#00ffad;
+			width:100%;
+			text-align: center;
+			position: relative;
+			top:-2300px;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+        }
+
+        .topunder{
+ 			position: relative;
+ 			width:30%;
+			text-align: center; 
+			top:100px;
+			margin-left: auto;
+			margin-right:auto;
+			background-color:yello;
+        }
+        .topunder_left{
+        	float: left;
+        	width:50%;
+        }
+
+        .topunder_right{
+        	float: left;
+        	width:50%;
+        }
+
+        .topunder_left:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+        }
+
+        .topunder_right:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+        }
+
+/* 퍼스트프로젝트 박스 설정*/
+
+		.box_1{	
+			position:relative; 
+			z-index: 1;
+			top:10px; 
+			left: 70px; 
+			float: left; 
+		}
+
+		.box_2{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top:-300px;
+			width:60%;
+			height: auto;
+			z-index: 5;
+			background-color: pin;
+		}
+
+		.box_3{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			margin-top: 0px;
+		}
+		.box_4{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -200px;
+		}		
+
+		.box_5{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -400px;
+		}		
+
+		.box_6{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -600px;
+		}		
+
+		.box_7{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -800px;
+		}	
+		.box_8{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -1000px;
+		}			
+
+		.box_9{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -1200px;
+		}			
+
+
+		.box_10{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -1400px;
+		}			
+
+		.box_11{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -1600px;
+		}	
+
+		.box_12{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -1800px;
+		}	
+
+		.box_13{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -2000px;
+		}	
+
+		.box_14{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			top: -2200px;
+		}	
+
+		/* 퍼스트프로젝트 텍스트 설정*/
+		.firsttext {
+			float: right;
+			width:74%;
+			height:200px;
+			top:80px;
+			right:120px;
+			padding:0px 20px 0px 20px;
+			color:#00d097;
+			overflow: scroll;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: left;
+			background-color: white;
+		}
+
+		.firsttext {
+		    -ms-overflow-style: none; /* IE and Edge */
+		    scrollbar-width: none; /* Firefox */
+		}
+		.firsttext::-webkit-scrollbar {
+		    display: none; /* Chrome, Safari, Opera*/
+		}
+
+		.name {
+			float: left;
+			width:23%;
+			height:200px;
+			padding:0px 20px 0px 20px;
+			top:80px;
+			color:#00d097;
+			font-size: 23px;	
+			background-color: re;
+		}
+
+		.name2 {
+			float: left;
+			width:23%;
+			height:200px;
+			padding:0px 20px 0px 20px;
+			top:80px;
+			color:#00d097;
+			font-size: 23px;	
+			background-color: re;
+			word-break: break-all;
+		}
+
+
+
+		/* 이미지 설정*/
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img3 {
+		  width: 70vw;
+		  height: 40vh;
+		  position: relative;
+		  text-align: center;
+		  background-color: pin;
+		}
+
+		.img4 {
+		  width: 70vw;
+		  height: auto;
+		  position: relative;
+		  text-align: center;
+		  background-color: pin;
+		}
+
+		.picture1{
+			position: relative;
+			top:-2500px;
+			text-align: center;
+			margin-left:auto;
+			margin-right:auto; 
+		}
+
+		.img_menu{width:300px;}
+
+		/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+
+
+		.clearfix{clear:both;}
+
+		.up{
+		    position:fixed;
+		    right:20px;
+		    bottom:30px;
+		    z-index: 999;
+		    width:80px;
+		}
+
+
+
+
+		/* 화면크키 800미만 */
+		@media screen and (max-width:800px){
+			.box_1{float:left; left:10px; text-align: center;}
+			.box_2{}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.img3{width: 70vw;height: 40vh;}
+			.firsttext{font-size: 13px; line-height: 23px;}
+			.name{font-size: 16px; background-color: re; margin-top:30px;}
+			.name2{font-size: 13px; background-color: re; margin-top:30px;}
+			.up{width: 50px; right:12px;}
+			.mid{top:-230px;}
+			.bottom{top:-2300px;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+			.topunder{ position:relative; width:70%; text-align: center; top:-70px;  z-index: 0;}
+        	.topunder_left{float: left; width:100%; }
+        	.topunder_right{float: left; width:100%;}
+		}
+
+
+		
+
+	</style>
+</head>
+
+<body>
+	
+	<header id="header">
+
+
+<!-- 네비게이션 메뉴 바 -->
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+	  <div class="overlay-content">
+	    <a href="index.html">MICMAC</a>
+	    <a href="magazine.html">MAGAZINE</a>
+	    <a href="introduction.html">INTRODUCTION</a>
+	    <a href="contact.html">CONTACT</a>
+	  </div>
+	</div>
+
+	  <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+	    <img src="pic/menu_icon2.png" width="80px">
+	  </span>
+
+	<!-- 상단 메뉴바 -->
+	<div class="top">
+		
+			<div class="menu">
+				<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+			</div>
+
+			<div class="menu">
+				<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+			</div>
+
+			<div class="menu">
+				<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+			</div>
+
+			<div class="menu">
+				<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+			</div>
+
+	</div>
+
+	<!-- 소메뉴 -->
+	<div class="topunder">
+			<div class="topunder_left">
+				<a href="magazine.html"><img class="img_menu" src="pic/menu/first.png" ></a>
+			</div>
+
+			<div class="topunder_right">
+				<a href="magazine-personal.html"><img class="img_menu" src="pic/menu/personal.png" ></a>
+			</div>
+        
+            <div class="clearfix"></div>
+	</div>
+
+	<br><br><br><br>
+
+	<div class="mid">
+
+
+<!--김레즈-->
+	<div class="box_3">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>김레즈 <br><br><br>
+			</div>
+
+			<div class="firsttext textmedium">
+			내가 좋아하는 팔월이었다. 자정을 넘긴 클럽 안에는 사람들이 들어왔다 나갔다
+			를 반복했다. 망사 스타킹과 가죽 바지를 입은 외국인이 봉에 매달린 채 춤을 췄
+			다. 무대 가까이에 외국인의 움직임을 감상하는 짙은 갈색의 단발머리 여자가 있
+			었다. 전 여자친구의 분위기를 닮은 내가 좋아하는 유형의 얼굴, 깊은 눈매를 가
+			진 여자가 나를 쳐다봤다. 우리의 처음이었다. 나는 그녀의 지인으로 추정되는
+			사람들의 무리로 다가갔다. 오늘 처음 만난 그들은 작은 막대 사탕을 입에 물고
+			있었다. 그중의 제일 유쾌한 언니가 나에게 사람들을 소개해줬다. 나와 눈을 마
+			주했던 그녀는 나보다 열두 살이 많았고 자꾸만 내 눈을 피했다. 나는 그들과 얘
+			기를 나누면서 자리를 지켰다. 무리에 있던 숏컷의 예쁘장한 얼굴을 한 언니가
+			내게 말을 걸었다. 나는 그 언니와 얼굴을 가까이 마주하면서 그녀의 반응을 살
+			폈다. 그녀는 여전히 내게 관심을 가지지 않으려 노력하고 있었다. 그 모습이 귀
+			여워서 그녀가 더 궁금해졌다. 나는 숏컷 언니에게 미안하다는 말을 남기고 언니
+			의 입에 물려 있는 막대 사탕을 빼내어 물었다. 그리고 옆에 있는 그녀에게 다가
+			갔다. 그녀 앞에 서서 사탕을 반으로 깨물었다. 반으로 갈라진 사탕의 막대를 그
+			녀에게 건넸다. 그녀는 웃으며 고개를 저었다. 나도 그녀를 따라 웃으며 막대에
+			남겨진 사탕을 깨물었다. 그리고 그녀의 몸을 끌어당겨 반 조각의 사탕을 그녀의
+			입으로 넘겨주었다. 딸기우유의 달큼한 맛이 입안에 맴돌았다. 음악 소리가 심장
+			박동을 따라 쿵, 쿵 울렸다. 그녀와 나는 서로의 손을 잡고 허리를 잡고 눈을 맞췄
+			다. 칵테일을 나눠 마시고 귓속말로 대화를 나눴다. 그날 새벽 우리는 한적한 골
+			목을 걸어 오래된 호텔에 들어갔다. 분홍빛으로 떠오르는 해를 바라보며 아침을
+			맞았다. 내가 사랑하는 팔월의 어느 날, 우리의 처음이었다.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+<!--미정-->
+	<div class="box_4">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>미정<br><br><br>
+			</div>
+
+			<div class="firsttext textmedium">
+			지금으로부터 13년 전, 나는 생일선물로 두발자전거를 선물 받았다. 보조 바퀴 달린 어린이 자전거를 놓아줄 때가 온 거였다. 처음엔 당연히 실패했다. 엄청나게 넘어졌고 울기를 반복했다. 한참 후 나는 질리고 힘들어서 엄마에게 절대 타지 않겠다고 선포했다. 그렇지만 어린이 자전거는 더 이상 내 덩치와 어울리지 않았다. 조금 과장된 표현이지만 내가 있어야 할 자리를 구분하지 못했다는 느낌이 들었다. 그래서 울며 겨자 먹기로 다시 도전했다. 연습 장소는 집 앞 공원. 이번엔 엄마가 도와주었다. 내가 자전거에 타면 엄마가 쓰러지지 않게 뒤를 잡아 주며 나와 함께 앞으로 나아갔다.<br>
+ 
+			나는 불안한 동작으로 페달을 밟으며 뒤에 있는 엄마에게 계속해서 소리쳤다. 놓지 말아 달라는 간절한 부탁에 엄마는 계속 대답했다. 잘 가고 있다고. 대충 네 번 정도 반복했을 때 엄마의 목소리가 더 이상 들리지 않는다는 걸 깨달았다. 어쩐지 자전거 뒤를 꾹 누르고 있던 무게감도 사라진 듯했다. 나는 살짝 뒤돌아보았다. 엄마는 놀랍게도 저 멀리서 나를 바라보고 있었다. 그 순간 이상한 기분에 휩싸이며 발에 힘이 잔뜩 들어갔다. 엄마에 대한 배신감보단 혼자서도 해냈다는 뿌듯함이 더 컸다. 그렇게 공원 한 바퀴를 오로지 내 힘으로 돌고 돌았다.<br>
+			 
+			그 뒤로는 넘어지는 걸 두려워하지 않게 되었다. 내리막길을 질주하다 굴러 무릎을 심하게 다쳤을 때도 울지 않고 다시 일어났다. 혼자서도 언제든 나아갈 수 있다는 걸 깨달았기 때문이었다. 나의 도전 의식을 처음으로 일깨워 주었던 두발자전거. 엄마의 믿음이 있었기에 가능했다는 걸 나는 안다.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_5">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>Stella
+			</div>
+
+			<div class="firsttext textmedium">
+				처음 콘서트를 갔을 때가 생각난다. 2012년 즈음의 빅뱅 콘서트였다. 당시에 빅뱅은 인기가 너무 많아서 음악방송은 꿈도 꾸지 않았고 콘서트 티켓팅에 성공하는 것만으로도 ‘현장을 가는 팬’으로서의 자부심을 키울 수 있었다. 2012년의 나는 13살로, 초등학생이었다. 내 한 달 용돈보다 비싼 콘서트 티켓값과 콘서트에서 흔들 응원봉. 그리고 쫌쫌따리 굿즈마저 사야 한다는 의무감도 있었기 때문에 그것까지 합한 금액을 모두 부모님께 요구해야 했다. 그렇게 마련한 세미 코 묻은 돈으로 티켓팅에 성공하여 콘서트에 가게 되었다. 하지만 지금 와서 생각해보니 진짜 음악을 즐기러 간다거나 빅뱅만을 보기 위해 콘서트에 간 것은 아니었던 거 같다. 학교에서 빅뱅이라는 공통 관심사로 친해진 친구와 함께 콘서트에 갔다는 추억을 만들고 싶었고, 커뮤니티에서 빅뱅으로 알게 된 또래 친구들과의 실제 만남을 가지고 싶었으며, 인터넷에서만 보던 ‘금손' 분들의 부채와 슬로건을 선착순으로 나눔 받고 싶었다. 무엇보다도 ‘나는 어린 나이에 이미 빅뱅 콘서트에 가본 적이 있다’며 자랑하고 싶은 마음이 제일 컸을지도 모른다.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+	<div class="box_6">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>익명
+			</div>
+
+			<div class="firsttext textmedium">
+				저의 첫 여자친구 개리씨(개리 닮았다 해서 지음).... 요즘 윤스테이가 흥하잖아요? 거기에 배우 최우식이 나오잖아요? 근데 계속 보니까,,,, 개리씨가 사실은 최우식이랑 똑같이 생긴 거 있죠... 앞으로 개리씨와의 일화를 풀 때는 우식씨라고 정정해야 할듯요..
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_7">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>익명
+			</div>
+
+			<div class="firsttext textmedium">
+				우리는 '처음'이라고 하면 보통 섹슈얼한 기억들을 떠올리곤 한다. 첫키스, 첫사랑, 첫경험... 보통 그런 기억들이 먼저 떠오르는 이유는 자극적이기 때문이다. 하지만 나의 강렬한 처음은 전혀 섹슈얼하지 않고 비도덕적인 행위라 할 수 있다. 나의 첫 도둑질. 비도덕적인 행위도 어떤 의미로 보면 심장이 두근두근 엄청나게 자극적이라 할 수 있다. 심지어는 유치원생때의 경험이라 고작 6살 먹은 아이에게 그 경험은 얼마나 자극적겠나. 선생님께서 잘 하는 아이에게만 주겠다고 엄포를 한 후 그 사탕들을 책상위에 올려놓으셨다. 이유는 사실 잘 모르겠다. 선생님의 코를 납작 눌러주고 싶었을까? 나도 '잘하는 아이다.' 라는 상징적 전리품을 가지고 싶었을까? 그저 이유는 모르겠고 그때의 두근두근 한 심장의 느낌만 남아있다. 심장이 입밖으로 튀어나올 것 같고 손발이 저린 그 자극적인 느낌. 미어캣마냥 주변을 엄청나게 살피며 몰래 사탕 여러알을 훔치고는 나는 잘하는 아이라 받은거다 라고 아이들에게 자랑을 하며 나를 부러워하는 아이들에게 선심을 쓰듯 도둑질한 사탕들을 나눠준 기억이 난다. 곧 선생님께 걸려서 엄청나게 혼났지만. 여러 사랑들을 거친 지금 와서 생각을 해보면 가슴 떨리던 사랑들에게서 비슷한 느낌을 받았다. 옆에 있는 것만으로도 떨려 손발이 저리고 가슴이 콩닥콩닥 뛰어나올 것같은 느낌이 마치 멀미와 같아 차라리 심장을 입밖으로 꺼내버리고 싶은 느낌. 바로 자극적인 그 느낌. 우리는 흔하게 '처음은 오래가는 것이니까, 처음은 중요해.' 라곤 하는데 그 이유는 자극적이기 때문이 아닐까? 아무리 자극적이어도 계속해 경험하면 무뎌지기 마련이지만 처음은 처음이니까. 그래서 나는 당신의 처음을 들려달라는 문장을 봤을 때 자연스레 강렬한 처음이라고 읽어버렸다. 당신들의 '강렬한 처음'도 궁금하다.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_8">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name2 textbold"> 
+				<br><br><br>@hun_hun_hun<br><br><br>
+			</div>
+
+			<div class="firsttext textmedium">
+				‘교사’의 자격으로 교단에 처음 오른 한 달을 기억한다.
+				어색한 정장 왼편, 잔기스 하나 없이 빛나는 명찰과 함께 섰던 2학년 3반의 공기를 기억한다. 비록 교사 자격증 하나 없이 학부생 4학년, 교육 실습생의 신분으로 맞이한 처음이지만, ‘처음’이라는 단어가 주는 거리감과 두려움에 비해, 어린 시절 은사님들을 보고 상상한 모습과 닮아가는 기대가 더 컸다.
+				한 주, 두 주 지나며 미약하지만 거대하게 쌓여 전해진, 아이들의 따스한 햇볕.
+				교단에서 아이들과 함께 피워낸 한 차시의, 짧고도 강렬했던 수업.
+				삭막하게 바람 한 점 불지 않는 임용고시생의 마음을 다시금 남모르게 채우는 그 향기는 2019년 처음 피워낸 그 수업의 꽃이 아니었을까?
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_9">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name2 textbold"> 
+				<br><br><br>@xhinee_
+			</div>
+
+			<div class="firsttext textmedium">
+				나는 처음의 기억이 아닌 기억의 처음으로 거슬러 올라가 보려고 한다. 5~6살쯤 됐으려나 어린이집에서 내 생일파티가 있던 날이었다. 22살 먹은 지금도 그렇지만 그때는 특히나 엄마랑 떨어지기 싫어했었는데, 생일파티에 온 엄마를 보고 눈물이 빵 터져 어른들이 날 달래주느라 진땀 빼던 표정들이 생각난다. 결국은 내가 도저히 진정이 되질 않아 생일의 주인공임에도 불구하고 엄마랑 먼저 집에 갔는데, 아무 말도 안 하시고 화나신듯 저만치 먼저 걸어가는 엄마의 뒷모습이 아직도 생각난다. 뒤돌아보지도 않고 먼저 걸어가는 엄마의 매정한 모습과 눈치가 보였던지 더 이상 떼를 쓰지 못하고 뒤를 쫄래쫄래 걸어가던 내가 나의 첫 기억 속에 자리하고 있다. 그맘때쯤 우리 엄마는 항상 내 손을 잡거나 안고 다녔다고 하셨는데 아마 처음 보는 엄마의 무뚝뚝한 모습과 처음 느껴보는 '눈치 본다'라는 감정이 충격적(?)이었는지 이 때의 기억이 나의 기억의 처음에 자리잡고 있다!
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_10">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name2 textbold"> 
+				<br><br><br>@dpdodedm
+			</div>
+
+			<div class="firsttext textmedium">
+				내가 좋아하는 문장을 너도 좋다며 함께 웃던 계절은 봄이었다. 마주친 눈 속에 우리가 읽은 문장이 담겨 있었다. 그 문장은 정말이지 쓸쓸하고 차가웠는데 북향의 자취방에 구름 없는 하늘의 햇빛이 들어오는 것 같았다. 어젯밤에 정리하지 않은 방을 치우면서, 찰그락 소리를 내며 남은 설거지를 할 때도, 아무렇게나 책장에 꽂혀 있는 책을 가지런히 둘 때도. 우리는 혼자가 아니었다. 며칠 전 지독한 악몽을 꿨다는 나의 말에 이마를 손으로 톡톡 치고 이불 속으로 파고드는 너를 보면서 나는 사람을 사랑하는 법이 아닌 사랑을 사랑하는 법을 배웠다. 긴 시간이 지나 나는 그 방에서 나와 나무 그늘 밑으로 파고들어 햇빛을 피하는 사람이 되었다. 그런 기억 속의 너에게. 언젠가는 말해주고 싶었다. 우리는 결코 가벼운 마음으로 우연을 허락하지 않았다고. 감당하지도 못할 거면서 너무 많은 감정을 이해했지만, 더는 이해할 수 없다고 생각할 때쯤 사랑이 시작되었다고. 이해할 수 없어서 사랑은 언제나 처음 같은 것이기도 했다고.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_11">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>익명
+			</div>
+
+			<div class="firsttext textmedium">
+				처음 디자인을 배웠을 때가 기억난다. 한국에서 미대 입시를 배우고 미대에 들어온 대부분의 학생이라면 아마 디자인=그림 이라고 착각하고 있을 것이다. 나 또한 그랬고 주변의 많은 사람들이 그랬다. 디자인은 단순히 미적인 것의 창조만을 말하는 것이 아니다. 디자인에는 개념이 들어간다. 물론 디자인의 영역은 무궁무진 해서 예쁜 그림을 그리는 것도 디자인의 영역이라고 볼 수 있을지도 모르겠다. 하지만 적어도 내가 대학에 진학해서 교수님한테 배운 디자인은 그런것이 아니었다. 1학년 첫 수업. '디자인'이라는 이름이 붙은 과목의 첫 수업. 매우 낯설었다! 이게 뭐지?만 머릿속에 둥둥 떠다녔다... 여튼 그런 적응의 시간을 보내고 나는 디자인 역시 개념이 중요하다고 생각했다. 공간 디자인, 리빙 디자인, 영상 디자인, 시각 디자인, 환경 디자인... 등등 환경까지도 디자인이 필요하다. 우리 삶에 착 붙어서 절대적으로 필요한 모든 것에 디자인이 필요하다. 내가 살아가는 환경을 더 넓고 자유롭게 만들어주는 것을 디자이너가 한다. 내가 생각했던 것 보다 더 넓은 세상이 있다는 걸 깨닫고, 삶의 영역이 넓어지는 순간이었다.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_12">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name2 textbold"> 
+				<br><br><br>@lucetelemon
+			</div>
+
+			<div class="firsttext textmedium">
+				열 살 무렵 엄마 MP3로 이어폰을 꼽고 김아중의 Maria를 처음 들었던 순간을 잊지 못합니다. 전주가 시작되자 가슴이 쿵쿵대고 온 세상이 음악으로 가득찬 기분이었습니다. 지금은 무선 이어폰을 사용하지만 가끔 그때 생각이 나 줄 이어폰으로 음악을 듣곤 합니다. 그 순간처럼 음악이 온세상에 울려퍼지는 기분은 들지 않더군요. 제 인생에서 가장 벅차고 행복한 '처음'이었습니다.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_13">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name2 textbold"> 
+				<br><br><br>@cocorijjang 
+			</div>
+
+			<div class="firsttext textmedium">
+				필리핀 세부의 에메랄드 빛 그라데이션으로 선명하고 파랗고 한없이 투명한 바닷가에서 스쿠버 다이빙를 처음으로 접했을 때가 떠오릅니다. 니모를 찾아서나 인어공주에서나 봤던 물고기와 산호초와 바닷 속 세계에 푹 빠졌던 순간이었습니다. 너무 아름다워서 나가고 싶지 않았던 신비로움이 가득한 공간이었습니다. 마음만은 이미 그랑블루의 주인공.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+
+	<div class="box_14">
+
+		<img class="img3" src="pic/firstbg.png">
+
+		<div class="box_2">
+
+			<div class="name textbold"> 
+				<br><br><br>오사미
+			</div>
+
+			<div class="firsttext textmedium">
+				내가 처음 비건을 알게 된 건 작년 9월이었다. 사실 ‘비건’이라는 개념에 대한 인지는 그 한참 전부터 하고 있었지만 굳이 ‘알게 된’이라고 표현해버린 이유가 있다. 그때의 나를 이제야 돌이켜 보자면, 난 분명 비건을 의식적으로 멀리했다. 난 고기를 매우 좋아하고, 비건이 되면 맛없는 야채들을 수북이 쌓아둔 채 기름기 하나 없는 신선식만 챙겨 먹어야 할 테니까, 존중은 해야 마땅하겠지만 나와는 영원히 관련 없을 타인의 신념. 이게 비건에 대해 기저에 깔린 나의 솔직한 생각이었다. 그렇게 비건을 더 알려는 약간의 노력조차 하지 않은 채로 살다가 작년 9월 우연히 비건 식당에 가게 되는 기회가 생겼다. 어쨌든 새로운 문화의 음식을 접해본다는 기대 반, 맛없으면 어쩌나 하는 걱정 반으로 새송이 구이 파스타와 비건 와인 한 잔을 시켰다. 조금 기다린 뒤 웨이터가 건네준 파스타와 와인을 한 입씩 음미한 그 순간, 난 비건을 알았다. 그간의 내 생각을 마구 놀리기라도 하듯이 음식은 완벽하게 훌륭했다. 쫀득하고 부드러운 버섯과 오일에 감싸져 감칠맛을 돋구는 면은 입안에서 깔끔한 조화를 이뤘고 그 후 살짝 적신 와인은 다음의 한 입을 위해 속을 매끄럽게 잠재워줬다. 그날 난 지난 시간 가져온 생각들이 실체 없는 편견이었음을 인정할 수밖에 없었다. 그렇다고 내가 완전한 비건이 돼 버렸느냐 묻는다면 그건 아니다. 하지만 이제는 비건을 일부러 멀리하지 않고 일상의 평범한 선택지 중 하나로 남겨둔다. 삼겹살이 당기는 날이 있듯 비건 음식이 당기는 날이 있고, 그런 날엔 별 고민없이 비건 식당에 찾아가 친구와 함께 비건 피자, 비건 리조또를 시켜 나눠 먹는다. 신념이란 언제나 거창해 보이지만 결국 시작은 가벼운 이해의 시도다. 혹시 이 글을 읽는 사람들 중 아직 예전의 나처럼 비건이 마냥 어렵게만 느껴지는 이가 있다면 그냥 툭 말해주고 싶다. 일단 한번 먹어보라고.
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+<a href="#header">
+	     <img src="pic/backtotop.png" class="up">
+</a>
+
+ <div class="bottom">
+    	Copyright(c)2021 MICMAC All rights reserved.
+ </div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+</body>
+</html>
+

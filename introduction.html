@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	<link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff')" rel="stylesheet">
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px; 
+			margin:0;
+			background-color:#00ffad; 
+			line-height:1.8; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 10px;
+		}
+		
+
+
+		.top{
+			position: fixed; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.bottom{
+		    z-index: 999;
+		    padding-top:7%;
+		    font-size:13px;
+		    font-family: 'GmarketSansMedium';
+		    color:#00ffad;
+		    width:100%;
+		    text-align: center;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+		}
+
+		.box_1{	
+			position:relative; 
+			z-index: 1;
+			top:10px; 
+			left: 70px; 
+			float: left; 
+			background-color: pin;
+		}
+
+		
+
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img2 {
+		  width: 90%;
+		  height: auto;
+		}
+
+		.img3{
+			width:80vw;
+			height: 80vh;
+		 	position: relative;
+		  	text-align: center;
+		  	}
+
+		.nemo{
+			position:relative;
+			margin-left: auto;
+			margin-right: auto;
+			top:110px;
+			text-align: center;
+			z-index: -999;
+		}
+
+
+
+		.text{
+			width:60%;
+			height:500px;
+			margin-top:-500px;
+			margin-left: auto;
+			margin-right: auto;
+			color:#00d097;
+			overflow: scroll;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: left;
+			background-color: pik;
+			z-index: 999;
+		}
+
+		.text {
+		    -ms-overflow-style: none; /* IE and Edge */
+		    scrollbar-width: none; /* Firefox */
+		}
+		.text::-webkit-scrollbar {
+		    display: none; /* Chrome, Safari, Opera*/
+		}
+		/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.big{font-size:23px;}
+		.mideum{font: 20px;}
+		.small{font-size:17px;}
+
+		.overlay {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 999;
+			  top: 0;
+			  right: 0;
+			  background-color: white;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			}
+
+		.overlay-content {
+			  position: relative;
+			  top: 25%;
+			  width: 100%;
+			  text-align: center;
+			  margin-top: 30px;
+			}
+
+		.overlay a {
+			  padding: 8px;
+			  text-decoration: none;
+			  font-size: 30px;
+			  font-family: 'GmarketSansBold';
+			 line-height:70px;
+			  color: #00ffad;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+		.overlay a:hover, .overlay a:focus {
+			  color: #00d097;
+			}
+
+		.overlay .closebtn {
+			  position: absolute;
+			  top: 20px;
+			  right: 45px;
+			  font-size: 60px;
+			}
+
+		.menuicon{margin-top:10px; margin-left:82vw; display: none;}
+
+
+		a:link{text-decoration: none; color: #00d097;}
+ 	  	a:visited{text-decoration: none; color: #00d097;}
+ 	  	a:hover{text-decoration: none; color: #00ffad;}
+
+ 	  	.line{
+			border:solid 0.5px #00d097;
+			width:100%;
+		}
+
+		.
+
+		@media screen and (max-height: 450px) {
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn {
+		  font-size: 40px;
+		  top: 15px;
+		  right: 35px;
+		  }
+		}
+
+		@media screen and (max-width:800px){
+			.box_1{float:left; left:10px; text-align: center;}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.dropdown-content{float: left; display: inline; }
+			.bottom{padding-top:25%;}
+			.nemo{top:-10px; he}
+			.text{margin-top:-690px; height: 610px; font-size: 16px; line-height: 30px; }
+			.menuicon{display: block;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+
+		}
+		
+		@media screen and (min-width:800px){
+			{display: none;}
+
+	</style>
+</head>
+
+<body>
+<!-- 네비게이션 메뉴  -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+ <div class="overlay-content">
+    <a href="index.html">MICMAC</a>
+    <a href="magazine.html">MAGAZINE</a>
+    <a href="introduction.html">INTRODUCTION</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</div>
+
+
+
+  <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+    <img src="pic/menu_icon2.png" width="80px">
+  </span>
+
+
+
+<div class="top">
+	
+		<div class="menu">
+			<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+		</div>
+
+
+		<div class="menu">
+			<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+		</div>
+
+</div>
+
+	<div class="nemo">
+		<img class="img3" src="pic/nemo.png">
+	</div> 
+
+	<div class="text textmedium">
+        
+		<span class="textbold big">What is MICMAC?</span><br><br>
+
+		음모, 혼란의 뜻을 지니고 있는 &lt;MICMAC&lt;는 혼란 속을 살아가는 세상의 음모론을 담고 있습니다. 지난 1호에서 일차원적 음모론과 혼란을 여러 시각으로 이야기하였다면, 이번 2호에선 음모론의 영역을 확장하였습니다. 보이지 않게 우리의 삶과 생활 속에 자리잡힌 음모, 혼란에 대해 이야기하고 바깥으로 꺼내보았습니다. 음모와 혼란이 익숙해져버린 시대에서 다양한 삶을 가진 여자 일곱이 모여 각기 다른 시각으로 세상의 부조리를 바라보았습니다.<br><br>
+
+
+		<a href="https://drive.google.com/file/d/1JZJbhDVgiFQO_52xv11jVZNKbYmuSLHM/view?usp=sharing">
+			MICMAC 1호.pdf 
+		</a><br><br><br>
+
+		<div class="line"></div><br><br>
+
+		<span class="textbold big">에디터 소개</span><br><br>
+
+		<span class="textbold"> 오사미 </span>
+		<span class="small">[홍보부]</span><br>
+		현재 SNS 콘텐츠 제작부터 작성 및 업로드까지 모두 담당하고 있습니다. 친구들하고 소중한 추억과 경험을 쌓고 싶어서 함께 하고 있어요! 앞으로 더더 열심히 할 거에요 많관부 >.< <br><br>
+
+		<span class="textbold"> 김레즈 </span>
+		<span class="small">[미디어부]</span><br>
+		레즈비언 전문 에디터. 여자와 고양이를 사랑하며 김 씨 성을 가진 대한민국 레즈비언이다. 잘 팔리는 레즈로 활동했던 이력이 있으며 현재는 은퇴 후 유부녀 레즈 생활을 하고 있다. 레즈의, 레즈에 의한 레즈를 위한 글을 쓴다.<br><br>
+
+
+		<span class="textbold"> Stella </span>
+		<span class="small">[미디어부/Special Editor]</span><br>
+		22살 대학생입니다. 건강과 환경, IT와 미디어,여자배구, 해외 연예인을 좋아합니다... 좋아하는 것들을 보고 듣고 배우고 공유하고 싶어요 ♥<br><br>
+
+		<span class="textbold"> 미정 </span>
+		<span class="small">[미디어부/Special Editor]</span><br>
+		읽고 쓰는 것이 좋아 시작했습니다. <br><br>
+
+		<span class="textbold"> 미르 </span>
+		<span class="small">[디자인부]</span><br>
+		micmac magazine의 디자인을 맡았습니다! 하고 싶은 게 많은데 그걸 전부 할 수 있는 게 이곳인 거 같아요. 친구들과 함께 만들어가는 시간이 재밌고 소중합니다.<br><br>
+
+		<span class="textbold"> 원해</span>
+		<span class="small">[디자인부/Special Designer]</span><br>
+		시각디자인 전공 중인 학생입니다! :) <br><br>
+
+
+
+
+
+
+
+
+	</div>
+
+
+
+    <div class="bottom">
+    	Copyright(c)2021 MICMAC All rights reserved.
+    </div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+
+
+</html>
+

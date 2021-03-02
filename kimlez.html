@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	<link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff')" rel="stylesheet">
+
+	 <link rel='stylesheet' href='css/menuicon.css'>
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px; 
+			margin:0;
+			background-color:#00ffad; 
+			line-height:1.8; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 10px;
+		}
+		
+
+
+		.top{
+			position: fixed; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.bottom{
+		    z-index: 999;
+		    padding-top:7%;
+		    font-size:13px;
+		    font-family: 'GmarketSansMedium';
+		    color:#00ffad;
+		    width:100%;
+		    text-align: center;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+		}
+
+		.box_1{	
+			position:relative; 
+			z-index: 1;
+			top:10px; 
+			left: 70px; 
+			float: left; 
+			background-color: pin;
+		}
+
+		
+
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img2 {
+		  width: 90%;
+		  height: auto;
+		}
+
+		.img3{
+			width:80vw;
+			height: 80vh;
+		 	position: relative;
+		  	text-align: center;
+		  	}
+
+		.nemo{
+			position:relative;
+			margin-left: auto;
+			margin-right: auto;
+			top:110px;
+			text-align: center;
+			z-index: -999;
+		}
+
+		.text{
+			position: relative;
+			color:#00d097;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: left;
+			background-color: pik;
+			z-index: 55;
+			width:90%;
+			top:10px;
+			left: 5%;
+		}
+
+		.textcenter{
+			position: relative;
+			color:#00d097;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: center;
+			z-index: 55;
+			width:90%;
+		}
+
+		.center{text-align: center;}
+
+		.bigbox{
+			position: relative;
+			width:60%;
+			height:600px;
+			margin-top:-560px;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: scroll;
+		}
+
+		
+
+		.bigbox {
+		    -ms-overflow-style: none; /* IE and Edge */
+		    scrollbar-width: none; /* Firefox */
+		}
+		.bigbox::-webkit-scrollbar {
+		    display: none; /* Chrome, Safari, Opera*/
+		}
+
+
+
+		/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.big{font-size:23px;}
+		.small{font-size}
+
+		.overlay {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 999;
+			  top: 0;
+			  right: 0;
+			  background-color: white;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			}
+
+		.overlay-content {
+			  position: relative;
+			  top: 25%;
+			  width: 100%;
+			  text-align: center;
+			  margin-top: 30px;
+			}
+
+		.overlay a {
+			  padding: 8px;
+			  text-decoration: none;
+			  font-size: 30px;
+			  font-family: 'GmarketSansBold';
+			 line-height:70px;
+			  color: #00ffad;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+		.overlay a:hover, .overlay a:focus {
+			  color: #00d097;
+			}
+
+		.overlay .closebtn {
+			  position: absolute;
+			  top: 20px;
+			  right: 45px;
+			  font-size: 60px;
+			}
+
+		.menuicon{margin-top:20px; margin-left:80vw;}
+
+		.back_button{
+			position:fixed;
+			top:170px;
+			left:5vw;
+		}
+
+		.back_button_img{
+			width:40px;
+		}
+
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.textbig{font-size: 23px;}
+		.textsmall{font-size: 15px;}
+
+		.line{
+			border:solid 0.5px #00d097;
+			width:100%;
+		}
+
+
+
+		@media screen and (max-height: 450px) {
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn {
+		  font-size: 40px;
+		  top: 15px;
+		  right: 35px;
+		  }
+		}
+
+		@media screen and (max-width:800px){
+			.box_1{float:left; left:10px; text-align: center;}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.dropdown-content{float: left; display: inline; }
+			.bottom{padding-top:10%;}
+			.nemo{top:-30px; height:; }
+			.img3{height: 90vh;}
+			.bigbox{margin-top:-800px; height:690px;}
+			.text{top:10px; height:690px; font-size: 15px; line-height: 30px; z-index: 55;}
+            .textbig{font-size: 20px;}
+
+			.back_button{position:fixed; top:40px; left:8vw;}
+			.back_button_img{width:40px;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+
+		}
+		
+		@media screen and (min-width:800px){
+			{display: none;}
+
+	</style>
+</head>
+
+<body>
+
+<!-- 네비게이션 메뉴 바 -->
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <div class="overlay-content">
+        <a href="index.html">MICMAC</a>
+        <a href="magazine.html">MAGAZINE</a>
+        <a href="introduction.html">INTRODUCTION</a>
+        <a href="contact.html">CONTACT</a>
+      </div>
+    </div>
+
+      <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+        <img src="pic/menu_icon2.png" width="80px">
+      </span>
+
+
+<!-- 상단메뉴  -->
+	<div class="top">
+		
+		<div class="menu">
+			<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+		</div>
+
+
+		<div class="menu">
+			<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+		</div>
+
+	</div>
+
+<!-- 뒤로가기 버튼  -->
+	<div class="back_button">
+		<a href="magazine-personal.html"><img class="back_button_img"src="pic/back.png" ></a>
+	</div>
+
+	<div class="nemo">
+		<img class="img3" src="pic/nemo.png">
+	</div> 
+
+
+	<!--
+	<div class="mmm2">
+		<img src="pic/nemo.png">
+	</div> 
+	!-->
+	<div class="bigbox">
+		
+		<div class="">
+		</div>
+
+		<div class="text textmedium">
+
+			<span class="textbold textbig">
+				<br>레즈비언의 연애</span><br>
+			<span class="textsmall">에디터 김레즈 </span>
+			<br><br>
+
+			<div class="line"></div><br>
+
+			<span class="textbold">차례</span><br>
+
+			<span class="textlight textsmall">/ 여자를 만나는 기준<br>
+			/ 일반 스타일, 이반 스타일<br>
+			/ 잘 팔리는 레즈<br>
+			/ 습관성 플러팅과 관계중독<br>
+			/ 나를 사랑했던 모든 여자들에게</span>
+			<br><br>
+
+			<div class="line"></div><br><br>
+
+			<span class="textbold">제 1장, 여자를 만나는 기준</span>
+			<br><br>
+			 나는 여자를 사랑하는 레즈비언이다. 흔히들 레즈비언이라 하면 세상의 모든
+			여성을 사랑할 것이라 생각하는데 레즈들에게도 취향이란 것이 존재한다. 이성
+			애자 여성이 모든 남성을 조건 없이 사랑하지 않는 것처럼 당신 주변의 레즈비언
+			들도 당연히 같은 여성이라고 해서 사랑에 빠지지 않는다. 절친한 친구에게 커밍
+			아웃을 했더니 “설마 너 나를...?”하는 대답을 듣는 시대는 지났다. 나에게도 사랑에 빠지기 위한 몇 가지의 이유가 있다. 첫 번째, 여성이어야 할 것. 두 번째, 나보다 나이가 많아야 할 것. 세 번째, 연애 경험이 있어야 할 것. 이 세 가지의 조건들이 충족되고 서로 마음만 맞는다면 사랑하지 않을 이유가 없다. 하지만 나의 이상과는 달리 레즈의 세계는 그리 녹록지 않다. 나의 Lesbian data base에 의하면
+			레즈비언이 여자를 만날 때는 크게 두 가지 유형으로 나뉜다. 첫 번째 유형은 자
+			신만의 기준이 확고하기에 정말 조심스럽고 어려운 어른 레즈이다. 30-40대가
+			많으며 인생의 동반자를 찾고자 애쓴다. 연애 내공이 상당하기에 쉽게 마음을 내
+			주지 않고 따지는 조건들이 많아 까다롭다. 어른 레즈의 신중함이 지루해질 때
+			상황이 어긋나고 뒤바뀌기도 한다. 하지만 연애를 시작하면 헌신적이고 관대한
+			레즈가 된다. 결혼했다, 생각하고 평생 만나는 게 좋다. 두 번째 유형은 레즈의
+			80%를 차지하고 있는 금사빠 레즈이다. 20대가 주를 이루며 이들에게 첫 만남에
+			고백은 익숙하고 연애를 시작함과 동시에 동거하는 건 일종의 문화가 되었다. 금
+			방 사랑에 빠지는 만큼 금방 사랑에 식기도 한다. 불같은 연애를 하면 영화 속 주
+			인공이 된 것 같아 재미있지만 결국 새드엔딩이다. 금사빠 레즈와 진중한 어른
+			레즈를 모두 만나본 나의 결론은 이렇다. 레즈들에게는 공통된 이상형이 있는데
+			그건 바로 헤테로처럼 보이는 레즈이다. 머리가 길고 치마를 즐겨 입으며 화장을
+			하고 말투가 나긋한 여성이 이에 해당한다. 남성이 원하는 여성의 스타일을 레즈
+			도 원한다. 참 아이러니하지 않은가? 물론 사람마다 다르기 때문에 모든 레즈가
+			이렇다, 확신할 수는 없다. 하지만 적어도 내가 경험해본 레즈의 100%는 헤테로
+			처럼 보이는 레즈가 이상형이다. 왜냐, 내가 바로 헤테로처럼 보이는 레즈이기
+			때문이다.
+			<br><br><br>
+
+			<span class="textbold">제 2장, 일반 스타일, 이반 스타일</span>
+			<br><br>
+			 레즈들은 왜 헤테로처럼 보이는 레즈를 원할까? 그건 바로 레즈비언 티가 나지
+			않기 때문이다. 레즈들은 자신의 경험과 다른 레즈의 경험을 바탕으로 사회가 동
+			성애를 금기시한다는 것을 알고 있다. 차별과 혐오는 아웃팅을 두렵게 만들었고
+			커밍아웃은 엄청난 용기가 되었다. 그리고 사회가 정해놓은 레즈비언의 스타일-
+			머리가 짧고 빨간색 체크남방을 입으며 문신이 가득한 손으로 담배를 피우는 모
+			습-은 실제로 일부 레즈비언의 모습이기도 하다. 하지만 숏컷에 화장을 하지 않
+			고 바지를 입는 것은 비단 레즈비언뿐만이 아니다. 여성을 억압하는 코르셋을 하
+			지 않는 여성들, 탈코르셋을 지향하는 여성들에게도 해당한다. 그러나 아직은 탈
+			코인들의 수가 적기 때문에 이성애자들은 탈코르셋을 한 여성을 레즈비언이라
+			확신하기도 한다. 탈코인들 중에 레즈비언이 대다수 존재하지만 비혼과 비연애
+			를 선언하는 여성들이 있기에 ‘탈코르셋=레즈비언’이라는 수식어는 옳지 않다.
+			길을 걷다가 눈만 마주쳐도 레즈인지 구별할 수 있는 나로서는 탈코인과 레즈를
+			구분할 수 있는데 이 둘의 스타일은 엄청난 차이가 있다. 그렇기에 탈코인이 모
+			두 레즈일 것이라 생각하는 건 이성애자의 착각이다. 어찌 되었든 이성애자의 관
+			점으로 볼 때 머리가 짧은 여성은 다 레즈비언이다. 숏컷 여성 둘이 손을 잡으면
+			레즈비언 커플이 되는 것이다. 그럼 숏컷 여성과 머리가 긴 여성이 손을 잡으면
+			어떻게 될까? 남자친구가 있는 이성애자 여성과 레즈비언의 우정이다. 적어도
+			커플이 아닌 친구로 본다는 말이다. 앞서 말했듯이 사회는 동성애를 혐오한다.
+			레즈비언 커플을 길에서 마주하면 손가락질하거나 욕설을 뱉는 사람들은 퀴어
+			퍼레이드에서만 볼 수 있는 게 아니다. 학교나 직장에서 흔히 볼 수 있고 숏컷 여
+			성이 혼자가 아닌 둘이 되었을 때 혐오는 한층 짙어진다. 이러한 사실을 바탕으
+			로 레즈비언들은 헤테로처럼 보이는 레즈를 선호한다. 전문 용어로는 ‘일반 스타
+			일’이라고 하는데 이는 ‘이반 스타일’과 대조된다. 그리고 레즈비언들이 가장 원
+			하는 헤테로처럼 보이는 일반 스타일 레즈비언인 나 김레즈는 가장 대중적으로
+			선호하는 외향이기에 잘 팔리는 레즈가 되었다.
+			<br><br><br>
+
+			<span class="textbold">제 3장, 잘 팔리는 레즈</span>
+			<br><br>
+			 나로 말할 것 같으면 레즈비언도 인정한 ‘헤테로처럼 보이는 레즈’이다. 하지만
+			여기서 한 가지 사실을 짚고 넘어가자면 나는 레즈들에게 잘 팔리기 위해 레즈의
+			입맛에 나를 맞췄다. 오랜 관찰을 바탕으로 충분히 학습했고, 노력했다. 같은 동
+			성에게 사랑받는 건 생각보다 쉽지 않다. 레즈의 세계는 정말 호락호락하지 않은
+			것이다. 물론, 선천적으로 타고난 것들도 있었다. 잘 타지 않는 나의 흰 피부와 어르신들이 좋아하는 수수하고 귀여운 선한 인상, 예민한 기질로 다져진 관찰력과
+			부드러운 목소리는 내가 노력하지 않음에도 얻었다. 타고난 것을 바탕으로 나는
+			동성 친구들에게서 ‘문학소녀인 아련한 첫사랑의 이미지’라는 타이틀을 획득했
+			고 이 타이틀이 여성에게 잘 먹힌다는 걸 일찍이 깨달았다. 여고에 진학한 것도
+			나의 큰 그림이었다. 나는 여자가 편했고, 좋았고, 여자를 위해서라면 어떤 것도
+			할 준비가 되어 있었다. 하지만 이제는 안다. 내가 진정으로 여자를 사랑한다면
+			이미지 트레이닝 따위가 중요하지 않다는 것을. 나는 고등학생 때부터 여자를 만
+			나고 연애를 시작했지만 그때의 내 감정이 사랑이었는지는 확실치 않다. 호기심
+			에서 비롯되었고 외로움을 채우기에 급급했다. 상대방을 사랑한다면, 쳐다보는
+			것만으로도 설레서 정신을 못 차릴 정도라면 연기를 할 수 없다. 공들여놓은 탑
+			이 무너지고 치부가 밝혀질 때 비로소 자유롭게 사랑할 수 있었다. 나는 상대방
+			이 원하는 만큼 고분고분하지 않았고 애교도 없었으며 헌신적이지 못했다. 고집
+			이 셌고 욕심이 많았으며 짓궂었다. 몇 번의 연애와, 무수히 많은 가벼운 만남 끝
+			에 인정했다. 나는 ‘조신한 일반 스타일 레즈비언’ 이미지에 부합하지 않았다. 그
+			리고 나의 방황이 시작됐다.
+			<br><br><br>
+
+			<span class="textbold">제 4장, 습관성 플러팅과 관계중독</span>
+			<br><br>
+			 연애를 쉬지 않고 하는 사람이 있다, 나처럼. 이별 후에는 새로운 만남이 펼쳐지
+			고 끝은 또 다른 시작을 알리기도 한다. 그러나 반복된 만남과 헤어짐은 나를 무
+			감각하게 만들었다. 나는 인생의 재미를 원하는 사람이었고 나의 즐거움을 위해
+			서 여자를 이용하는 건 당연했다. 이전의 내가 고분고분하고 얌전한 조신 레즈였
+			다면 나의 레즈 정체성을 깨달은 이후 솔직하고 자유분방한 플러팅 레즈로 거듭
+			났다. 새로운 여자를 만나는 건 쉬웠다. 커뮤니티에 나의 외적 키워드를 적으면
+			많은 연락이 왔다. 시간과 장소를 정한 후 1시간 이내에 만남이 이루어졌다. 다양
+			한 연령과 수많은 직업을 가진 여자를 만날 수 있었다. 연애관, 성적 취향부터 그
+			들이 살아온 인생사는 천차만별이었다. 우리에게 자연스러운 만남은 판타지이고
+			운명보다는 노력의 결실이 대부분이었다. 내가 여자를 만나는 목적은 때에 따라
+			변했다. 심심하면 커피를 마셨고 연애가 필요할 땐 밥을 먹고 외로우면 전화를
+			했다. 가끔은 무언가 그리워서 하염없이 걷고 화가 나서 원나잇을 했다. 하루에 3
+			명과 약속을 잡을 때도 있었고 한 명과 3일을 지내기도 했었다. 결국엔 혼자가 되
+			기 싫어 만났던 사람들은 때론 진지했고 때로는 너무나 가벼웠다. 레즈비언 문화
+			는 폐쇄적이기 때문에 내가 누구를 만나든, 누구와 썸을 타고 어떤 연애를 하든
+			상대방과 나를 제외한 모든 이들은 알지 못했다. 나에게는 레즈비언 친구가 없었
+			기에 모든 갈등을 혼자 해결해야 했고 여자를 만나면서 느낀 나의 감정을 오롯이
+			스스로 감당해야만 했다. 내가 몇 명과 어떠한 관계를 가져도 신경 쓸 사람은 없
+			었기에 한꺼번에 여러 명의 사람을 만나기도 했다. 나는 만나는 사람마다 습관적
+			인 플러팅을 했고 상대방이 관심을 가지면 나의 흥미는 시들었다. 집 앞에서 몇
+			시간을 기다리게 했고 충독적인 외박을 했고 잠수를 탔다. 그 당시의 나는 지독
+			한 알코올 중독과, 섹스 중독과, 관계 중독이었다.
+			<br><br><br>
+
+			<span class="textbold">제 5장, 나를 사랑했던 모든 여자들에게</span>
+			<br><br>
+			나는 사회가 금기시하는 동성애자이다. 처음 만나는 이들은 한 치의 의심 없이
+			나를 이성애자라 생각하는데 이러한 편견이 세상의 혐오로부터 나를 감싸준다.
+			여자를 좋아한다 고백해도 단순한 동경 혹은 선망 정도로 여길 뿐이고 농도 짙은
+			스킨십을 하더라도 깊은 우정이라 생각한다. 내가 이성애자처럼 보이기-사회가
+			규정한 레즈비언의 이미지에 부합하기-때문에 여자를 만날 수 있었다. 레즈비언
+			의 연애는 둘이서 은밀히 진행해야 할 관계에서 제삼자가 개입하지 않는 것만으
+			로도 성공적이라 할 수 있다. 가족에게 숨기고, 친구에게 숨기는 연애는 불편하
+			고 억울하다. 앞서 말했듯이 레즈비언의 연애란 녹록지 않다. 내가 가장 사랑하
+			고, 나를 가장 사랑는 사람의 존재를 숨겨야 할 때 우리는 차별을 느낀다. 나는 비겁하게도 차별을 마주하고, 맞서 싸우는 대신 차별으로부터 도망쳤다. 아무에게
+			도 말하지 못 할 일들을 저지르면서 즐거움을 느꼈고 많은 이들에게 상처를 안겨
+			주었다. 방황에는 끝이 없다. 사막처럼 길고 긴 외로움과 메마른 감정만이 존재
+			할 뿐이다. 아무리 걷고 또 걸어도 입안에는 모래알의 텁텁함과 눈가의 뻑뻑한
+			찌꺼기들이 느껴진다. 이런 나를 보고 어떤 사람은 부럽다고 했다. 어떤 이는 미
+			련하다 했고 나는 스스로에게 미안했다. 그리고 현재, 오랜 시간이 지났지만 나
+			의 방황은 계속되고 있다. 그러나 이제 내 옆에는 나를 응원하는 이들이 있고 사
+			랑하는 사람이 있다. 레즈비언으로서 견뎌야 할 바람과 어둠은 여전하지만 나는
+			더 이상 혼자가 아니다. 잠깐의 오아시스일지라도 지금의 나는 연기를 하지 않
+			고, 여러 관계를 맺지 않는다. 여느 이성애자의 평범한 인생처럼 살고 있다. 그리
+			고 문득 생각한다. 나를 사랑했던 모든 여자들에게, 여자를 사랑하는 세상의 레
+			즈비언들에게 작은 희망이 되고 싶다고. 이것이 내가 레즈비언 글을 쓰는 이유이
+			다. 레즈비언의 연애란 녹록지 않고 결코 호락호락하지 않다. 하지만 그럼에도
+			불구하고 나는 여자를 사랑하는 레즈비언이다.
+			<br><br>
+		</div>
+	</div>
+</div>
+
+
+    <div class="bottom">
+    	Copyright(c)2021 MICMAC All rights reserved.
+    </div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+
+
+</html>
+

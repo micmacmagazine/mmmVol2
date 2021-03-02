@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	<link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff')" rel="stylesheet">
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px; 
+			margin:0;
+			background-color:#00ffad; 
+			line-height:1.8; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 10px;
+		}
+		
+
+
+		.top{
+			position: fixed; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.bottom{
+		    z-index: 999;
+		    padding-top:7%;
+		    font-size:13px;
+		    font-family: 'GmarketSansMedium';
+		    color:#00ffad;
+		    width:100%;
+		    text-align: center;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+		}
+
+		.box_1{	
+			position:relative; 
+			z-index: 1;
+			top:10px; 
+			left: 70px; 
+			float: left; 
+			background-color: pin;
+		}
+
+		
+
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img2 {
+		  width: 90%;
+		  height: auto;
+		}
+
+		.img3{
+			width:80vw;
+			height: 80vh;
+		 	position: relative;
+		  	text-align: center;
+		  	}
+
+		.nemo{
+			position:relative;
+			margin-left: auto;
+			margin-right: auto;
+			top:110px;
+			text-align: center;
+			z-index: -999;
+		}
+
+
+
+		.text{
+			width:60%;
+			height:500px;
+			margin-top:-500px;
+			margin-left: auto;
+			margin-right: auto;
+			color:#00d097;
+			overflow: scroll;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: left;
+			background-color: pik;
+			z-index: 999;
+		}
+
+		.text {
+		    -ms-overflow-style: none; /* IE and Edge */
+		    scrollbar-width: none; /* Firefox */
+		}
+		.text::-webkit-scrollbar {
+		    display: none; /* Chrome, Safari, Opera*/
+		}
+		/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.big{font-size:23px;}
+		.small{font-size}
+
+		.overlay {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 999;
+			  top: 0;
+			  right: 0;
+			  background-color: white;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			}
+
+		.overlay-content {
+			  position: relative;
+			  top: 25%;
+			  width: 100%;
+			  text-align: center;
+			  margin-top: 30px;
+			}
+
+		.overlay a {
+			  padding: 8px;
+			  text-decoration: none;
+			  font-size: 30px;
+			  font-family: 'GmarketSansBold';
+			 line-height:70px;
+			  color: #00ffad;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+		.overlay a:hover, .overlay a:focus {
+			  color: #00d097;
+			}
+
+		.overlay .closebtn {
+			  position: absolute;
+			  top: 20px;
+			  right: 45px;
+			  font-size: 60px;
+			}
+
+		.menuicon{margin-top:10px; margin-left:82vw; display: none;}
+
+		@media screen and (max-height: 450px) {
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn {
+		  font-size: 40px;
+		  top: 15px;
+		  right: 35px;
+		  }
+		}
+
+		@media screen and (max-width:800px){
+			.box_1{float:left; left:10px; text-align: center;}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.dropdown-content{float: left; display: inline; }
+			.bottom{padding-top:25%;}
+			.nemo{top:-10px;}
+			.text{margin-top:-690px; height: 610px; font-size: 16px; line-height: 30px; }
+			.menuicon{display: block;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+
+		}
+		
+		@media screen and (min-width:800px){
+			{display: none;}
+
+	</style>
+</head>
+
+<body>
+<!-- 네비게이션 메뉴  -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+ <div class="overlay-content">
+    <a href="index.html">MICMAC</a>
+    <a href="magazine.html">MAGAZINE</a>
+    <a href="introduction.html">INTRODUCTION</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</div>
+
+
+  <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+    <img src="pic/menu_icon2.png" width="80px">
+  </span>
+
+
+
+<div class="top">
+	
+		<div class="menu">
+			<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+		</div>
+
+
+		<div class="menu">
+			<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+		</div>
+
+</div>
+
+	<div class="nemo">
+		<img class="img3" src="pic/nemo.png">
+	</div> 
+
+
+	<div class="text textmedium">
+        
+		<span class="textbold big">Contact</span><br><br>
+
+		MICMAC는 각각의 삶과 시각의 공유를 언제나 환영합니다.<br><br>
+		지원 및 문의<br>
+		micmacmagazine.official@gmail.com<br><br><br>
+
+	</div>
+
+    <div class="bottom">
+    	Copyright(c)2021 MICMAC All rights reserved.
+    </div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+
+
+</html>
+

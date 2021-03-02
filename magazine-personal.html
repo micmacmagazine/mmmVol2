@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	 <link rel='stylesheet' href='css/menuicon.css'>
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px 0px; 
+			background-color:; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 18px;
+		}
+
+
+/* 메뉴 */
+		.top{
+			position: absolute; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.mid{
+			position: relative;
+			text-align: center; 
+			margin-top:60px;
+		}
+
+		.bottom{
+			z-index: 999;
+			font-size:13px;
+			font-family: 'GmarketSansMedium';
+			color:#00ffad;
+			width:100%;
+			text-align: center;
+			position: relative;
+			top:-1900px;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+        }
+
+        .topunder{
+ 			position: relative;
+ 			width:30%;
+			text-align: center; 
+			top:100px;
+			margin-left: auto;
+			margin-right:auto;
+			background-color:;
+        }
+        .topunder_left{
+        	float: left;
+        	width:50%;
+        }
+
+        .topunder_right{
+        	float: left;
+        	width:50%;
+        }
+
+        .topunder_left:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+        }
+
+        .topunder_right:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+        }
+
+/* 펄스널프로젝트 박스 설정*/
+
+		.box1{	
+			position: relative;
+			width:80%;
+			height: auto;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			top:50px;
+		
+			z-index: -99;
+			background-color: pink;
+		}
+
+		.box2{	
+			position: relative;
+			width:80%;
+			height: auto;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			top:0px;
+			left:10vw; 
+			z-index: 99;
+			background-color: pink;
+		}
+
+		.box3{
+			width:80%;
+			height: auto;
+			position: relative;
+			display: none
+		}
+
+		.box3_left{
+			float: left;
+			width:70%;
+		}
+
+
+		.box3_right{
+			float: right;
+			width:70%;
+		}
+
+
+		.name_icon{
+			float: left;
+		}
+
+
+/* 펄스널프로젝트 이름 아이콘 설정 */
+		.namebox{
+			position: relative;
+			width:80%;
+			height: auto;
+			left:6vw;
+			right:6vw;
+			top:70px;
+            z-index: 50;
+            background: pink;
+
+		}
+
+		.name1{
+			position: absolute;
+			margin-left:0px;
+		}
+
+		.name2{
+			position: absolute;
+			margin-left:30vw;
+		}
+
+		.name3{
+			position: absolute;
+			margin-left:60vw;
+		}
+
+		.name4{
+			position: absolute;
+			top:40vh;
+			margin-left:15vw;
+
+		}
+
+		.name5{
+			position: absolute;
+			top:40vh;
+			margin-left:45vw;
+		}
+
+
+/* 이미지 설정*/
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img2{
+			width:300px;
+			height: auto;
+			margin: 70px;
+		}
+
+		.img_menu{width:300px;}
+
+
+
+/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+
+		.clearfix{clear:both;}
+
+		.up{
+		    position:fixed;
+		    right:20px;
+		    bottom:30px;
+		    z-index: 999;
+		    width:80px;
+		}
+/* 줌*/
+        .zoom {
+          transition: transform .2s; /* Animation */
+        }
+
+        .zoom:hover {
+            transform: scale(1.1);}
+
+
+
+
+		/* 화면크키 800미만 */
+		@media screen and (max-width:800px){
+			.box_1{}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.up{width: 50px; right:12px;}
+			.bottom{top:-2300px;}
+			.img2{width:200px; height: auto; margin: 20px;}
+
+			.box3{display: block;}
+
+
+			.namebox{position: relative;width:80%;height: auto; margin-left:auto; margin-right:auto; top:-80px;}
+			.name1{position: absolute; margin-left:0px;}
+			.name2{position: absolute; top:15vh; margin-left:30vw;}
+			.name3{position: absolute; top:30vh; margin-left:0vw;}
+			.name4{position: absolute; top:45vh; margin-left:30vw;}
+			.name5{position: absolute; top:60vh; margin-left:0vw;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+			.topunder{ position:relative; width:70%; text-align: center; top:-70px;  z-index: 0;}
+        	.topunder_left{float: left; width:100%;}
+        	.topunder_right{float: left; width:100%;}
+		}
+
+
+		
+
+	</style>
+</head>
+
+<body>
+	
+	<header id="header">
+		
+<!-- 네비게이션 메뉴 바 -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <div class="overlay-content">
+    <a href="index.html">MICMAC</a>
+    <a href="magazine.html">MAGAZINE</a>
+    <a href="introduction.html">INTRODUCTION</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</div>
+
+  <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+    <img src="pic/menu_icon2.png" width="80px">
+  </span>
+
+
+	<!-- 상단 메뉴바 -->
+	<div class="top">
+		
+			<div class="menu">
+				<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+			</div>
+
+			<div class="menu">
+				<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+			</div>
+
+			<div class="menu">
+				<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+			</div>
+
+			<div class="menu">
+				<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+			</div>
+
+	</div>
+
+
+	<!-- 소메뉴 -->
+	<div class="topunder">
+			<div class="topunder_left">
+				<a href="magazine.html"><img class="img_menu" src="pic/menu/first.png" ></a>
+			</div>
+
+			<div class="topunder_right">
+				<a href="magazine-personal.html"><img class="img_menu" src="pic/menu/personal.png" ></a>
+			</div>
+        
+            <div class="clearfix"></div>
+	</div>
+
+
+	<div class="namebox">
+		<div class="name1 zoom">
+			<a href="stella1.html"><img class="img2" src="pic/personal/3.png"></a>
+		</div>
+
+		<div class="name2 zoom">
+			<a href="mijeong.html"><img class="img2" src="pic/personal/2.png"></a>
+		</div>
+
+		<div class="name3 zoom">
+			<a href="kimlez.html"><img class="img2" src="pic/personal/1.png"></a>
+		</div>
+
+		<div class="name4 zoom">
+				<a href="leejeri.html"><img class="img2" src="pic/personal/4.png"></a>
+		</div>
+
+		<div class="name5 zoom">
+			<a href="stella2.html"><img class="img2" src="pic/personal/3.png"></a>
+		</div>
+        
+        <div class="clearfix"></div>
+	</div>
+
+
+
+
+
+
+	<a href="#header">
+	 	<img src="pic/backtotop.png" class="up">
+	</a>
+
+
+	<div class="bottom">
+	    	Copyright(c)2021 MICMAC All rights reserved.
+	</div>
+
+
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> MICMAC </title>
+
+	<link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff')" rel="stylesheet">
+
+	 <link rel='stylesheet' href='css/menuicon.css'>
+
+	<style>
+		*{box-sizing: border-box;}
+		html{width:100%; height:100%; 
+			font-family: 'GmarketSansLight','GmarketSansMedium','GmarketSansBold';}
+
+		@font-face {
+		    font-family: 'GmarketSansLight';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansMedium';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+		@font-face {
+		    font-family: 'GmarketSansBold';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+
+
+		body{
+			width:100%; 
+			height: 100%; 
+			padding:0px 0px 0px 0px; 
+			margin:0;
+			background-color:#00ffad; 
+			line-height:1.8; 
+			word-break: keep-all; 
+			background-image: url('pic/background.png'); 
+			background-repeat:no-repeat; ;
+			background-size : cover;
+			background-attachment: fixed;
+
+			font-size: 10px;
+		}
+		
+
+
+		.top{
+			position: fixed; 
+			width:100%; 
+			z-index:1;
+  			background-color: none;
+		}
+
+		.top a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		}
+
+		.bottom{
+		    z-index: 999;
+		    padding-top:7%;
+		    font-size:13px;
+		    font-family: 'GmarketSansMedium';
+		    color:#00ffad;
+		    width:100%;
+		    text-align: center;
+		}
+
+		.menu{
+			float: left; 
+			width:24.99999%;
+		}
+		.menu:hover{
+			transform: skewX( -15deg );
+        	transition: all 0s linear;
+		}
+
+		.box_1{	
+			position:relative; 
+			z-index: 1;
+			top:10px; 
+			left: 70px; 
+			float: left; 
+			background-color: pin;
+		}
+
+		
+
+		.img1 {
+		  width: 100%;
+		  height: auto;
+		}
+
+		.img2 {
+		  width: 90%;
+		  height: auto;
+		}
+
+		.img3{
+			width:80vw;
+			height: 80vh;
+		 	position: relative;
+		  	text-align: center;
+		  	}
+
+		.nemo{
+			position:relative;
+			margin-left: auto;
+			margin-right: auto;
+			top:110px;
+			text-align: center;
+			z-index: -999;
+		}
+
+		.text{
+			position: relative;
+			color:#00d097;
+			font-size: 18px;	
+			line-height: 40px;
+			text-align: left;
+			background-color: pik;
+			z-index: 999;
+			width:90%;
+			top:10px;
+			left: 5%;
+		}
+
+		.bigbox{
+			position: relative;
+			width:60%;
+			height:600px;
+			margin-top:-560px;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: scroll;
+		}
+
+		
+
+		.bigbox {
+		    -ms-overflow-style: none; /* IE and Edge */
+		    scrollbar-width: none; /* Firefox */
+		}
+		.bigbox::-webkit-scrollbar {
+		    display: none; /* Chrome, Safari, Opera*/
+		}
+
+
+
+		/* 글자두께 */
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.big{font-size:23px;}
+		.small{font-size}
+
+		.overlay {
+			  height: 100%;
+			  width: 0;
+			  position: fixed;
+			  z-index: 999;
+			  top: 0;
+			  right: 0;
+			  background-color: white;
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			}
+
+		.overlay-content {
+			  position: relative;
+			  top: 25%;
+			  width: 100%;
+			  text-align: center;
+			  margin-top: 30px;
+			}
+
+		.overlay a {
+			  padding: 8px;
+			  text-decoration: none;
+			  font-size: 30px;
+			  font-family: 'GmarketSansBold';
+			 line-height:70px;
+			  color: #00ffad;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+		.overlay a:hover, .overlay a:focus {
+			  color: #00d097;
+			}
+
+		.overlay .closebtn {
+			  position: absolute;
+			  top: 20px;
+			  right: 45px;
+			  font-size: 60px;
+			}
+
+		.menuicon{margin-top:20px; margin-left:80vw;}
+
+		.back_button{
+			position:fixed;
+			top:170px;
+			left:5vw;
+		}
+
+		.back_button_img{
+			width:40px;
+		}
+
+		.textlight{font-family: 'GmarketSansLight'}
+		.textmedium{font-family: 'GmarketSansMedium'}
+		.textbold{font-family: 'GmarketSansBold'}
+
+		.textbig{font-size: 23px;}
+		.textsmall{font-size: 15px;}
+
+		.line{
+			border:solid 0.5px #00d097;
+			width:100%;
+		}
+
+
+
+		@media screen and (max-height: 450px) {
+		  .overlay a {font-size: 20px}
+		  .overlay .closebtn {
+		  font-size: 40px;
+		  top: 15px;
+		  right: 35px;
+		  }
+		}
+
+		@media screen and (max-width:800px){
+			.box_1{float:left; left:10px; text-align: center;}
+			.menu{position: relative; text-align: center; left: 110px; width:60%;}
+			.dropdown-content{float: left; display: inline; }
+			.bottom{padding-top:10%;}
+			.nemo{top:-30px; height:; }
+			.img3{height: 90vh;}
+			.bigbox{margin-top:-800px; height:690px;}
+			.text{top:10px; height:690px; font-size: 15px; line-height: 30px; z-index: 55;}
+            .textbig{font-size: 20px;}
+
+			.back_button{position:fixed; top:40px; left:8vw;}
+			.back_button_img{width:40px;}
+		}
+
+		@media screen and (max-width:800px){
+			.top{display: none;}
+
+		}
+		
+		@media screen and (min-width:800px){
+			{display: none;}
+
+	</style>
+</head>
+
+<body>
+
+<!-- 네비게이션 메뉴 바 -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <div class="overlay-content">
+    <a href="index.html">MICMAC</a>
+    <a href="magazine.html">MAGAZINE</a>
+    <a href="introduction.html">INTRODUCTION</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</div>
+
+  <span class="menuicon" style="cursor:pointer" onclick="openNav()">
+    <img src="pic/menu_icon2.png" width="80px">
+  </span>
+
+
+<!-- 상단메뉴  -->
+	<div class="top">
+		
+		<div class="menu">
+			<a href="index.html"><img class="img1" src="pic/menu/menu-micmac.png" ></a>
+		</div>
+
+
+		<div class="menu">
+			<a href="magazine.html"><img class="img1" src="pic/menu/menu-magazine.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="introduction.html"><img class="img1" src="pic/menu/menu-introduction.png"></a>
+		</div>
+
+		<div class="menu">
+			<a href="contact.html"><img class="img1" src="pic/menu/menu-contact.png"></a>
+		</div>
+
+	</div>
+    
+<!-- 뒤로가기 버튼  -->
+	<div class="back_button">
+		<a href="magazine-personal.html"><img class="back_button_img"src="pic/back.png" ></a>
+	</div>
+
+	<div class="nemo">
+		<img class="img3" src="pic/nemo.png">
+	</div> 
+
+
+	<!--
+	<div class="mmm2">
+		<img src="pic/nemo.png">
+	</div> 
+	!-->
+	<div class="bigbox">
+		
+		<div class="">
+		</div>
+
+		<div class="text textmedium">
+			<span class="textbold textbig">
+				<br>동북공정</span><br>
+			<span class="textsmall">에디터 이제리 </span><br><br>
+
+			<div class="line"></div><br><br>
+
+			<span class="textbold">1.역사왜곡, 이대로 괜찮은가.</span><br>
+
+			지난해 7월, 우리나라에서는 일본 정부의 수출 규제로 인해 촉발된 ‘일본제품 불매운동’이 유행을 했다. ‘No Japan’이라는 슬로건을 앞세워 유니클로, 데상트, 무인양품 등 일본 기업의 불매 운동이 강행되었고, 이전까지만 해도 일본에 대해 우호적이었던 국민들의 인식이 변화할 수 있는 계기가 되었다. 이와 동시에 독도와 관련한 일본의 역사왜곡 문제 또한 다시금 세기의 관심을 받기 시작했다.<br>
+			누군가는 소위 ‘국뽕’이라고 이야기하기도 하지만, 작은 것에서부터 발발된 국민들의 단합심은 그간 일본과 한국 간의 역사와 관계에 대해 무지했던 사람들을 일깨워주는 큰 성과를 이뤄낼 수 있었다.
+			<br><br>
+			그간 비교적 쉽게 접해왔던 일본의 역사왜곡 문제에 대해서는 많은 사람들이 인식하고 경각심을 가지고 있었지만, 우리가 제대로 인식하지 못하고 있던 부분에서 또한 심각한 역사왜곡의 문제가 일어나고 있다.
+			<br><br>
+			최근 중국에서는 한복 챌린지가 유행을 했다. 우리나라에서 이 부분이 이슈가 되기 시작했고, 우리나라 국민들은 이제야 차츰 중국의 역사왜곡 문제에 대해서 인지하기 시작했다. 중국은 한복과 아리랑이 중국의 문화라고 주장하며 많은 예능 프로그램을 통해 사실인 것처럼 이미지화 시키는 것에서 더 나아가, 김치가 중국의 음식이라고 주장하며 반대 의견에 테러를 하는 행동을 해오기 시작했다. 우리나라 입장에서는 갑작스럽게 느낄 수 있는 이러한 행동을 중국에서는 오랜시간동안 조용하고 치밀하게 준비해왔다.
+			<br><br>
+			그 시작은 동북공정이다.
+			<br><br><br>
+
+			<span class="textbold">2.동북공정으로부터 시작된 문화 뺏기</span><br>
+
+			동북공정이란 2002년부터 2007년까지 연구해온 중국의 프로젝트로, 고구려 역사와 발해 역사를 중국의 역사로 편입하려던 활동이다. 동북공정으로 시작된 역사왜곡은 우리나라가 모르는 사이 10년이 넘는 시간동안 더욱 자세하고 철저하게 이루어졌다. 중국은 출판사, 교과서, 웹사이트에 고구려와 발해 역사를 중국의 역사라고 주장했던 부분을 넘어서 전 세계인을 대상으로 완전히 중국의 것으로 만들어놓기 시작한다. 예를 들자면 초등학생들이 보는 옥스퍼드 교과서에는 고구려 시기가 중국의 것이라는 표기가 되어있고, 세계에서 잘 나가는 TIMELINES of HISTORY 조차도 한나라 시기 고구려가 중국으로 표기되어있다. 이 심각한 문제에 대해서 한국인들의 제대로 된 인지가 필요하며, 인지를 넘어서 해결하려는 의지를 가져야한다고 생각한다. 허나 현재 상황에서는 많은 이들이 동북공정에 대한 의미와 심각성에 대해 인지조차 하지 못하고 있는 것이 사실이다.
+			<br><br>
+			말도 안되는 동북공정의 주장을 시작으로 중국은 한국의 문화를 빼앗아가고 한국의 문화에 점차적으로 침투하기 시작한다. 앞서 말한 한복과 김치에 대한 주장을 시작으로 훠궈와 마라탕과 같은 중국 문화의 유행을 넘어 한국 유명인들의 역사 발언에 대한 중국인들의 테러, 그리고 한국 드라마 시장에 차이나머니가 침투하며 중국 기업의 PPL 문제가 커지고 있다. 또한 애니메이션판과 드라마판, 게임판, BL판 등 일반 사람들이 쉽게 접할 수 있는 문화에서도 서서히 역사왜곡을 실행하며 위화감없이 한국 문화에 침투하고 있다.
+			<br><br>
+			시작은 백두산을 장백산으로 바꿔 부르고, 한복과 김치 그리고 아리랑을 중국 내 매체에 계속적으로 노출시키며 중국 민족을 세뇌시키는 것이었지만 이는 점차적으로 우리나라에까지 영향을 미치기 시작했다.
+			<br><br>
+			<img src="pic/do1.png" width="100%"><br><span class="textsmall"><중국 프로그램 천천향상에서 한복을 입고 김치를 담구는 중국인의 모습></span>
+			<br><br><img src="pic/do2.png" width="100%"><br><span class="textsmall"><중국 프로그램 저취시가무에서 한복을 입고 아리랑을 부르는 중국인의 모습></span><br><br>
+			인기 아이돌이 라디오에서 백두산을 장백산으로 이야기하고, 리디북스의 인기 작품인 BL에서도 백두산을 장백산으로 표기하는 등 백두산의 문제에 대해서는 당연하다는 듯이 여기는 지경까지 이르렀다. 한국 유튜버 햄지는 김치와 쌈이 한국 음식이라는 발언을 했다는 이유로 중국 광고업체로부터 계약해지를 당하기도 했다. 게임계 또한 비슷하다. 중국 게임회사에서 만든 ‘아이러브니키’에서는 의상 업그레이드에 한복 테마를 출시했다. 이에 비난을 받자 돌연 한국 서비스를 종료하며 웨이보 공지를 통해 한국을 중국의 속국이라고 표현하는 등 제대로 된 설명 하나 없이 말도 안되는 주장을 밀어붙이기만 할 뿐이다.
+			<br><br>
+			중국에서는 말도 안되는 논리로 우리나라의 역사를 제 것인 마냥 떠들고 있지만 우리나라에서의 중국의 입지가 생각보다 거대하다는 점도 또한 문제가 된다. 중국 대표 OTT 기업 아이치이는 우리나라 드라마 ‘나를 사랑하는 스파이’, ‘편의점 샛별이’, ‘간 떨어지는 동거’ 등 30편이 넘는 한국 드라마의 해외 판권을 사들였다. 특히 방송 예정인 ‘간 떨어지는 동거’는 중국 기업 아이치이 오리지널로 제작이 된다. 여기서 그치지 않고 혐한 작가의 작품인 ‘태자비승직기’를 원작으로 하는 ‘철인왕후’가 한국에서 드라마로 제작이 되고, 한국 드라마 ‘여신강림’에는 차이나머니의 침투로 인한 중국 PPL 광고의 문제가 심각했다. 편의점에서 훠궈를 먹고 중국어 광고가 설치된 버스 정류장이 등장하는 등 대놓고 중국 기업에 대한 PPL이 한국 드라마에서 이뤄지고 있다.
+			<br><br>
+			<img src="pic/do3.png" width="100%"><br><span class="textsmall"><차이나머니가 침투한 한국 드라마 여신강림의 광고들></span>
+			<br><br>
+			‘꽃보다 남자’로 유명한 콘텐츠 강국인 타이완의 사례를 보면 우리나라 또한 긴장감을 놓치지 말아야 한다고 생각한다. 타이완은 경영난에 시달리며 중국 자본에 문을 열었지만 중국 자본이 타이완의 제작 인력을 흡수하며 결국 제작 기반 자체가 완전히 무너져 내리는 사태가 발생했다. 현재는 중국 콘텐츠 사업의 하청 기지로 전락했다는 평가를 받기까지 한다. 우리나라 또한 중국 자본의 유입으로 인한 콘텐츠 사업의 위기론이 대두되기도 했지만 한한령으로 인해 금세 잠잠해졌다. 하지만 현재 중국에서는 한한령 해체 움직임이 보이기 시작한지 꽤 지났고 코로나 사태가 잠잠해지면 이는 더욱 노골적인 움직임으로 변할 것이라 예측된다는 점을 기억해야만 한다.<br><br><br>
+
+			<span class="textbold">3.이제는 단합심을 보여야 할 때.</span><br>
+
+			우리나라 국민 또한 동북공정 문제에 대해 크게 분노하고 있다. 중국의 틱톡이 유행을 하면서 페이스 어플을 써서 우리나라의 유명 연예인을 따라하는 중국인들이 생겨나고, 한국의 거리 풍경이라는 이름을 달고 중국의 모습이 나오는 경우가 종종 보인다. 중국인들이 한국인을 모방하는 일이 많아지며 한국과 중국이 헷갈리고 모호해지는 지점이 나타나며 한국의 국민들 또한 이 사태에 분노하고 있다. 하지만 이 분노에서 그치면 결국 중국의 논리가 세계를 점령할 수도 있다. 지금이라도 바로잡지 못한다면 앞으로 중국의 동북공정 문제는 훨씬 더, 아주 세세한 부분까지 침투하게 될 지도 모른다. 그렇기에 많은 사람들이 이러한 부분에 대해 인지를 하고 현명하고 체계적인 방법으로 바로잡으려고 다 같이 노력해야한다. 한국인들의 입장에선 얼토당토 않은 주장이라고 생각할 수도 있지만 한국과 중국의 역사에 대해 제대로 된 지식을 갖고 있지 않은 유럽권에서는 중국의 말이 일리있다고 느낄 수도 있다는 점을 간과하면 안된다. 중국이 한국의 역사를 빼앗고 한국의 문화에 침투하는 문제들은 셀 수 없이 쏟아져나오고 있지만 그것에 대한 대응과 대책, 관련 대화들은 턱 없이 부족하다고 느낀다.
+			<br><br>
+			제일 먼저 전 세계의 출판사와 교과서와 웹사이트에서 잘못된 정보를 마구잡이로 뿌리고 있는 것부터 바로잡아야 한다고 생각한다. 어느순간 돌아보면 전 세계 70억 세계인들 중 한국의 역사가 한국의 것이라고 주장하는 건 한국 사람들 밖에 없게 되는 상황이 벌어질 수도 있다. 물론 이 문제에 대해 강경하게 대응하면 우리나라 경제 또한 손실이 커 문제가 생긴다는 점에 대해서는 인정한다. 그렇기에 서서히 중국에 대한 의존도를 줄이는게 최우선이고 가장 접근성이 좋은 방법이라고 생각한다. 또한 영상이나 책과 같은 매개체를 통해 논리적인 증거를 모은 컨텐츠들을 세계적으로 서서히 퍼트려야 한다고 생각한다. 이외에 한국 문화를 전달하는 공인들의 영향력 또한 빠르고 직접적인 대응이다. 더하여 방송사도 2000년대 초중반에 동북공정에 맞서 주몽, 연개소문, 대조영, 태왕사신기와 같은 고대사극을 생산해냈던 것을 본받아 그때처럼만큼은 아니더라도 혐한 작가의 작품을 리메이크 한다던가, 차이나머니에 완전히 의존하는 행위에 대해 심각성을 느껴야 한다고 생각한다.
+			<br><br>
+			좀 더 평범한 다수의 일반인들이 할 수 있는 방법에 대해서는 사실 관계를 확실히 깨닫고 인지하며 중국과 중국 자본에 대한 경계를 갖는 행동을 보여야 한다고 생각한다. 더하여 동북공정에 대한 글로벌 청원에도 많은 관심을 기울여야 한다고 본다. 역사 관련 문제에 대해서 일반인들이 획기적이고 큰 영향력을 행사하기에 어렵다는 부분에 대해 인정한다. 하지만 국민 하나 하나의 의식으로부터 역사 인식에 대한 올바른 방향이 정해진다고 생각한다. 자국 문화가 경쟁력인 지금 시대에 역사를 빼앗는 동북공정의 문제는 우리의 생각보다 훨씬 더 심각한 문제일 수도 있다는 점을 기억해야만 한다.
+<br><br>
+		</div>
+	</div>
+</div>
+
+
+    <div class="bottom">
+    	Copyright(c)2021 MICMAC All rights reserved.
+    </div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+</body>
+
+
+</html>
+
